@@ -12,6 +12,9 @@ class CTest:
         self.input = sys.stdin.read()
         self.caseName = sys.argv[1]
 
+        with open('data.out', 'r') as out:
+            self.output = out.read()
+
     def run(self):
         try:
             self.test()
