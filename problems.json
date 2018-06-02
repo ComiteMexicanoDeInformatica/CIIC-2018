@@ -3,6 +3,10 @@
 		{
 			"title": "Juego",
 			"path": "Juego"
+		},
+		{
+			"title": "Genes",
+			"path": "Genes"
 		}
 	]
 }
