@@ -4,6 +4,14 @@
       "filename": "solutions/100A.cpp",
       "verdict": "AC",
       "score": 100
+    },
+    {
+      "filename": "solutions/7.cpp",
+      "score": 7
+    },
+    {
+      "filename": "solutions/43.cpp",
+      "score": 43
     }
   ],
   "inputs": {

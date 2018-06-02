@@ -21,6 +21,8 @@ class Test(CTest):
         self.assertTrue(1 <= N <= 100000)
 
         nums = [int(x) for x in results[1].strip().split()]
+
+        self.assertEqual(len(nums), 2*N)
         self.assertTrue(abs(sum(nums)) < 2**31)
 
         if 'easy' in self.caseName:
