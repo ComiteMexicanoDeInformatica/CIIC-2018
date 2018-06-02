@@ -1,0 +1,13 @@
+interface Main {
+	[NoReturn] long measureBacteria(int gene1, int gene2);
+	[NoReturn] void report(
+		[Range(0, 500000)] int K, int[K] kind, long[K] idx
+	);
+};
+
+interface genes {
+	void tryScience(
+		int T, [Range(0, 1000000)] int C,
+		int[C] cost, int[C] gene1, int[C] gene2
+	);
+};
