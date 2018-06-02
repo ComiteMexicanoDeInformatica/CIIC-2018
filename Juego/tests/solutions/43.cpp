@@ -10,7 +10,7 @@ int maximo=0,a;
 
 void bruta(int x)
 {
-    if(x==a+1)
+    if(x==a)
     {
         return ;
     }
@@ -29,6 +29,7 @@ void bruta(int x)
     {
         arreglo[i+x]*=-1;
     }
+    actmax=0;
     for(int i=0;i<a*2;i++)
     {
         actmax+=arreglo[i];
