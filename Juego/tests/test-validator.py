@@ -19,6 +19,16 @@ class Test(CTest):
         nums = [int(x) for x in results[1].strip().split()]
         self.assertTrue(abs(sum(nums)) < 2**31)
 
+        if 'easy' in self.caseName:
+            self.assertTrue(
+                all(x >= 0 for x in nums) or
+                all(x <= 0 for x in nums)
+            )
+        elif 'medium' in self.caseName:
+            self.assertTrue(N <= 20)
+        else:
+            self.assertTrue(N >= 30)
+
         outregex = re.compile(r'^-?\d+\n$')
         self.assertTrue(re.match(outregex, self.output) != None)
 
