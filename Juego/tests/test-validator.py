@@ -10,7 +10,11 @@ from ctest import *
 class Test(CTest):
     def test(self):
         inregex = re.compile(r'^(\d+)\n(-?\d+(?: -?\d+)*)\n$')
-        results = re.match(inregex, self.input).groups()
+        match = re.match(inregex, self.input)
+
+        self.assertTrue(match != None)
+
+        results = match.groups()
         self.assertEqual(len(results), 2)
 
         N = int(results[0])
