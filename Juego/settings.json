@@ -18,7 +18,7 @@
     },
 
     "misc": {
-        "alias": "dummyomi",
+        "alias": "dummy-omi",
         "visibility": 0,
         "languages": "all",
         "email_clarifications": 0,
