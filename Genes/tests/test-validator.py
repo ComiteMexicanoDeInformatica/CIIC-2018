@@ -26,7 +26,7 @@ class Test(CTest):
         inlist = results[2].split('\n')
         inlist.pop()
 
-        self.assertEqual(len(inlist), C+1)
+        self.assertEqual(len(inlist), C+2)
 
         V = [[int(x) for x in y.split()] for y in inlist[:C]]
 
@@ -41,7 +41,7 @@ class Test(CTest):
             len(frozenset(frozenset([g1, g2]) for g1, g2, _ in V))
         )
 
-        I = [int(x) for x in inlist[-1].split()]
+        I = [int(x) for x in inlist[C].split()]
 
         self.assertEqual(len(I), T)
 
@@ -50,7 +50,7 @@ class Test(CTest):
             for x in I
         ))
 
-        outregex = re.compile(r'^\d+\n$')
+        outregex = re.compile(r'^$')
         self.assertTrue(re.match(outregex, self.output) != None)
 
         # subtasks

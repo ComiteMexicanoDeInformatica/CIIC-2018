@@ -126,15 +126,10 @@ void report(int K, int *kinds, long long *values)
 
 int main()
 {
-	ifstream secret("data.out");
-	secret >> optCost;
-	secret.close();
-
-	ifstream input("data.in");
-	input >> testCaseT;
+	cin >> testCaseT;
 	adj = vector<vector<int>>(testCaseT+1);
 
-	int C; input >> C;
+	int C; cin >> C;
 
 	cerr << "T = " << testCaseT << endl;
 	cerr << "C = " << C << endl;
@@ -142,7 +137,7 @@ int main()
 	vector<int> gene1(C), gene2(C), cost(C);
 	forn(i,C)
 	{
-		input >> gene1[i] >> gene2[i] >> cost[i];
+		cin >> gene1[i] >> gene2[i] >> cost[i];
 
 		testCaseCosts[make_pair(gene1[i],gene2[i])] = cost[i];
 		testCaseCosts[make_pair(gene2[i],gene1[i])] = cost[i];
@@ -154,10 +149,10 @@ int main()
 	findReportable();
 
 	testCaseIndexes.resize(testCaseT);
-	forn(i,testCaseT) input >> testCaseIndexes[i];
-	
-	input.close();
+	forn(i,testCaseT) cin >> testCaseIndexes[i];
 
+	cin >> optCost;
+	
 	tryScience(testCaseT, C, cost.data(), gene1.data(), gene2.data());
 
 	cerr << "report was never called!" << endl;
