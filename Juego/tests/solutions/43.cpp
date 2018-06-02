@@ -5,29 +5,45 @@
 
 using namespace std;
 
+int arreglo[1000];
+int maximo=0,a;
+
+void bruta(int x)
+{
+    if(x==a)
+    {
+        return ;
+    }
+    for(int i=0;i<a;i++)
+    {
+        arreglo[i+x]*=-1;
+    }
+    int actmax=0;
+    for(int i=0;i<a*2;i++)
+    {
+        actmax+=arreglo[i];
+    }
+    maximo=max(actmax,maximo);
+    bruta(x+1);
+    for(int i=0;i<a;i++)
+    {
+        arreglo[i+x]*=-1;
+    }
+    for(int i=0;i<a*2;i++)
+    {
+        actmax+=arreglo[i];
+    }
+    maximo=max(actmax,maximo);
+    bruta(x+1);
+}
+
 int main(){
-	int N;
-
-	scanf("%d", &N);
-	if(N<=20)
+	cin>>a;
+	for(int i=0;i<a*2;i++)
     {
-
-	vector<int> v(2*N);
-
-	for (int i = 0; i < 2*N; i++)
-		scanf("%d", &v[i]);
-
-	int same = 0, opp = 0;
-
-	for (int i = 0; i < N; i++){
-		same += abs(v[i] + v[i+N]);
-		opp += abs(v[i] - v[i+N]);
-	}
-
-	printf("%d\n", max(same, opp));
+        cin>>arreglo[i];
     }
-    else
-    {
-        cout<<-1;
-    }
+    bruta(0);
+    cout<<maximo;
+
 }
