@@ -1,0 +1,32 @@
+{
+    "title": "Genes",
+    "source": "CIIC 2018 (Agustín Santiago Gutiérrez)",
+
+    "limits": {
+        "TimeLimit": 1000,
+        "MemoryLimit": 33554432,
+        "OutputLimit": 16384,
+        "ExtraWallTime": 0,
+        "OverallWallTimeLimit": 60000
+    },
+
+    "validator": {
+        "name": "literal",
+        "limits": {
+            "TimeLimit": 1000
+        }
+    },
+
+    "interactive": {
+        "module_name": "genes"
+    },
+
+    "misc": {
+        "alias": "dummy-omi",
+        "visibility": 0,
+        "languages": "all",
+        "email_clarifications": 0,
+        "admin-groups": ["ciic2018"],
+        "tags": ["ciic2018", "libinteractive"]
+    }
+}

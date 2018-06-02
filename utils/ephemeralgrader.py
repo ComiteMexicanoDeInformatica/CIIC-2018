@@ -29,6 +29,11 @@ class EphemeralGrader:
                 json=payload,
                 timeout=65)
 
+        if 'multipart/form-data' not in r.headers.get('content-type', ''):
+            logger.error('Unexpected response!')
+            logger.error(r.text)
+            raise Exception('Unexpected response.')
+
         multipart = decoder.MultipartDecoder.from_response(r)
 
         for part in multipart.parts:
