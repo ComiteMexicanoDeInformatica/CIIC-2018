@@ -10,7 +10,7 @@ int maximo=0,a;
 
 void bruta(int x)
 {
-    if(x==a)
+    if(x==a+1)
     {
         return ;
     }
