@@ -6,7 +6,7 @@ interface Main {
 };
 
 interface genes {
-	void tryScience(
+	[NoReturn] void tryScience(
 		int T, [Range(0, 1000000)] int C,
 		int[C] cost, int[C] gene1, int[C] gene2
 	);

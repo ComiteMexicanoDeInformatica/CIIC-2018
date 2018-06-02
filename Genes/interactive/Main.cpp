@@ -113,10 +113,11 @@ void report(int K, int *kinds, long long *values)
 	}
 
 	if (testCaseTotalCost < optCost){
-		cerr << "Contestant found a better cost?!" << endl;
+		cerr << "Contestant found a better cost?!: "
+		     << testCaseTotalCost << endl;
 		exit(1);
 	} else if (testCaseTotalCost > optCost){
-		cerr << "Non-optimal query cost." << endl;
+		cerr << "Non-optimal query cost: " << testCaseTotalCost << endl;
 		score(0);
 	}
 
@@ -134,6 +135,10 @@ int main()
 	adj = vector<vector<int>>(testCaseT+1);
 
 	int C; input >> C;
+
+	cerr << "T = " << testCaseT << endl;
+	cerr << "C = " << C << endl;
+
 	vector<int> gene1(C), gene2(C), cost(C);
 	forn(i,C)
 	{

@@ -53,4 +53,31 @@ class Test(CTest):
         outregex = re.compile(r'^\d+\n$')
         self.assertTrue(re.match(outregex, self.output) != None)
 
+        # subtasks
+
+        if 'easysmall' in self.caseName:
+            self.assertTrue(1 <= T <= 1000)
+            self.assertTrue(0 <= C <= 5000)
+
+            self.assertTrue(all(
+                g1 == g2 or g1 + 1 == g2
+                for g1, g2, _ in V
+            ))
+        elif 'easy' in self.caseName:
+            self.assertTrue(all(
+                g1 == g2 or g1 + 1 == g2
+                for g1, g2, _ in V
+            ))
+        elif 'free' in self.caseName:
+            self.assertTrue(all(
+                c == 0 for _, _, c in V
+            ))
+        elif 'small' in self.caseName:
+            self.assertTrue(1 <= T <= 1000)
+            self.assertTrue(0 <= C <= 5000)
+        elif 'hard' in self.caseName:
+            pass
+        else:
+            raise TestFailure('Invalid case name!')
+
 Test().run()

@@ -22,6 +22,9 @@ struct NodeInformation
 
 void tryScience(int T, int C, int *cost, int *gene1, int *gene2)
 {
+    cerr << "T: " << T << endl;
+    cerr << "C: " << C << endl;
+
     forn(i,C) assert(0 <= cost[i] && cost[i] <= MAX_COST);
     forn(i,C) assert(1 <= gene1[i] && gene1[i] <= T);
     forn(i,C) assert(1 <= gene2[i] && gene2[i] <= T);
