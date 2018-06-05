@@ -7,6 +7,6 @@
     }
   ],
   "inputs": {
-    "filename": "test-validator.py"
+    "filename": "test-validator.cpp"
   }
 }
