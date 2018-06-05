@@ -7,6 +7,10 @@
 		{
 			"title": "Genes",
 			"path": "Genes"
+		},
+		{
+			"title": "Chemist",
+			"path": "Chemist"
 		}
 	]
 }
