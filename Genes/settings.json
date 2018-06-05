@@ -3,7 +3,7 @@
     "source": "CIIC 2018 (Agustín Santiago Gutiérrez)",
 
     "limits": {
-        "TimeLimit": 1000,
+        "TimeLimit": 5000,
         "MemoryLimit": 33554432,
         "OutputLimit": 16384,
         "ExtraWallTime": 0,
