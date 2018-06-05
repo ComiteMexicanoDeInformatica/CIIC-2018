@@ -114,14 +114,15 @@ void report(int K, int *kinds, long long *values)
 			score(0);
 		}
 	}
+	
+	cerr << "Expected optimal cost: " << optCost << endl;
 
 	if (testCaseTotalCost < optCost){
 		cerr << "Contestant found a better cost?!: "
 		     << testCaseTotalCost << endl;
 		exit(1);
 	} else if (testCaseTotalCost > optCost){
-		cerr << "Non-optimal query cost: " << testCaseTotalCost << endl;
-		cerr << "Expected: " << optCost << endl;
+		cerr << "Contestant gave non-optimal query cost: " << testCaseTotalCost << endl;
 		score(0);
 	}
 
