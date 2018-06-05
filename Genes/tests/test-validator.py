@@ -9,7 +9,7 @@ from ctest import *
 
 class Test(CTest):
     def test(self):
-        inregex = re.compile(r'^(\d+) (\d+)\n((?:\d+(?: \d+)*\n)*)$')
+        inregex = re.compile(r'^(\d+) (\d+)\n((?:-?\d+(?: -?\d+)*\n)*)$')
         match = re.match(inregex, self.input)
 
         self.assertTrue(match != None)
