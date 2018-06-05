@@ -109,7 +109,7 @@ for p in problems():
                             checker,
                             stdin=contents,
                             stderr=sys.stderr,
-                            timeout=5)
+                            timeout=10)
                         score = float(score)
                 except TestCaseFailure:
                     logger.error('Checker error.')

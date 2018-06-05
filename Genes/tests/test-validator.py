@@ -9,7 +9,7 @@ from ctest import *
 
 class Test(CTest):
     def test(self):
-        inregex = re.compile(r'^(\d+) (\d+)\n((?:\d+(?: \d+)*\n)*)$')
+        inregex = re.compile(r'^(\d+) (\d+)\n((?:-?\d+(?: -?\d+)*\n)*)$')
         match = re.match(inregex, self.input)
 
         self.assertTrue(match != None)
@@ -20,8 +20,8 @@ class Test(CTest):
         T = int(results[0])
         C = int(results[1])
 
-        self.assertTrue(1 <= T <= 500000)
-        self.assertTrue(1 <= C <= 1000000)
+        self.assertTrue(1 <= T <= 50000)
+        self.assertTrue(1 <= C <= 200000)
 
         inlist = results[2].split('\n')
         inlist.pop()
@@ -50,6 +50,8 @@ class Test(CTest):
             for x in I
         ))
 
+        opt = int(inlist[-1])
+
         outregex = re.compile(r'^$')
         self.assertTrue(re.match(outregex, self.output) != None)
 
@@ -72,6 +74,8 @@ class Test(CTest):
             self.assertTrue(all(
                 c == 0 for _, _, c in V
             ))
+
+            self.assertEqual(opt, 0)
         elif 'small' in self.caseName:
             self.assertTrue(1 <= T <= 1000)
             self.assertTrue(0 <= C <= 5000)
