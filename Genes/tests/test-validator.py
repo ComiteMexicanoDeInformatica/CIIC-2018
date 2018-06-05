@@ -20,8 +20,8 @@ class Test(CTest):
         T = int(results[0])
         C = int(results[1])
 
-        self.assertTrue(1 <= T <= 500000)
-        self.assertTrue(1 <= C <= 1000000)
+        self.assertTrue(1 <= T <= 50000)
+        self.assertTrue(1 <= C <= 200000)
 
         inlist = results[2].split('\n')
         inlist.pop()
