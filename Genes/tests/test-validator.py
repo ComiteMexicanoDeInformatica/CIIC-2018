@@ -50,6 +50,8 @@ class Test(CTest):
             for x in I
         ))
 
+        opt = int(inlist[-1])
+
         outregex = re.compile(r'^$')
         self.assertTrue(re.match(outregex, self.output) != None)
 
@@ -72,6 +74,8 @@ class Test(CTest):
             self.assertTrue(all(
                 c == 0 for _, _, c in V
             ))
+
+            self.assertEqual(opt, 0)
         elif 'small' in self.caseName:
             self.assertTrue(1 <= T <= 1000)
             self.assertTrue(0 <= C <= 5000)
