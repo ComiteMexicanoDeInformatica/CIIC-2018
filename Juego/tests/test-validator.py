@@ -23,7 +23,7 @@ class Test(CTest):
         nums = [int(x) for x in results[1].strip().split()]
 
         self.assertEqual(len(nums), 2*N)
-        self.assertTrue(abs(sum(nums)) < 2**31)
+        self.assertTrue(sum(abs(x) for x in nums) < 2**31)
 
         if 'easy' in self.caseName:
             self.assertTrue(
