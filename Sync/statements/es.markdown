@@ -1,52 +1,69 @@
-Est·s experimentando con un nuevo tipo de red neuronal artificial. La red neuronal est· formada por neuronas conectadas entre ellas por medio de axones. Inicialmente cada red neuronal tiene una importante pieza de informaciÛn distinta.
+Est√°s experimentando con una simulaci√≥n de un nuevo tipo de red neuronal artificial. La red neuronal est√° formada por neuronas conectadas entre ellas por medio de axones. Inicialmente cada red neuronal tiene una importante pieza de informaci√≥n distinta.
 
-Al formarse una red neuronal, las piezas de informaciÛn de las neuronas se empiezan a compartir entre ellas. Cuando se crea un nuevo axÛn que conecta dos neuronas, sus piezas de informaciÛn son autom·ticamente compartidas. Es posible compartir piezas de informaciÛn de una neurona a otra siempre y cuando estÈn conectadas por medio de una linea de axones.
+Al formarse una red neuronal, las piezas de informaci√≥n de las neuronas se empiezan a compartir entre ellas. Cuando se crea un nuevo ax√≥n que conecta dos neuronas, sus piezas de informaci√≥n son autom√°ticamente compartidas. Es posible compartir piezas de informaci√≥n de una neurona a otra siempre y cuando est√©n conectadas por medio de una secuencia de axones.
 
-El sistema para compartir informaciÛn es muy eficiente, si dos neuronas pueden compartir sus piezas de informaciÛn entre ellas, entonces autom·ticamente sincronizan las piezas de informaciÛn. DespuÈs de una sincronizaciÛn entre una neurona A y una neurona B, ambas contendr·n al menos las piezas de informaciÛn que contenÌan las neuronas A y B antes de la sincronizaciÛn.
+El sistema para compartir informaci√≥n es muy eficiente: si dos neuronas pueden compartir sus piezas de informaci√≥n entre ellas, entonces autom√°ticamente sincronizan todas las piezas de informaci√≥n. Despu√©s de una sincronizaci√≥n entre una neurona A y una neurona B, ambas contendr√°n todas las piezas de informaci√≥n que conten√≠an las neuronas A y B antes de la sincronizaci√≥n.
 
-Por detalles de desempeÒo, a lo m·s $M$ axones pueden ser creados. Al inicio, ning˙n axÛn existe. Algunos axones pueden llegar a desaparecer despuÈs de un tiempo. Si un axÛn desaparece, no puede ser usado hasta que vuelva a ser creado.
+Por detalles de desempe√±o, a lo m√°s $M$ axones pueden ser creados. Al inicio, ning√∫n ax√≥n existe. Algunos axones pueden llegar a desaparecer despu√©s de un tiempo. Si un ax√≥n desaparece, no puede ser usado hasta que vuelva a ser creado.
 
-La simulaciÛn dura $M$ segundos y cada segundo $j$, $1 \leq j \leq M$, el estado de un axÛn cambia (aparece o desaparece).
+La simulaci√≥n dura $M$ segundos y cada segundo $j$, $1 \leq j \leq M$, el estado de un ax√≥n cambia (aparece o desaparece).
 
 #Problema 
 
-Tienes que encontrar la cantidad de piezas de informaciÛn distintas que tiene cada neurona en el segundo $M+1$.
+Tienes que encontrar la cantidad de piezas de informaci√≥n distintas que tiene cada neurona en el segundo $M+1$.
 
 # Entrada
 
-La primera lÌnea contiene los enteros $N$, $M$, la cantidad de neuronas y la cantidad de segundos.
+La primera l√≠nea contiene los enteros $N$ y $M$: la cantidad de neuronas y la cantidad de segundos de la simulaci√≥n.
 
-En las siguientes M lÌneas cada una contendr· dos enteros que describen los cambios de axones. Particularmente la $i$-Èsima lÌnea describe el cambio en el segundo $i$ de la forma $x_i$ $y_i$ $(x_i < y_i)$ que significa que hubo un cambio en la conexiÛn entre $x_i$ y $y_i$ en el segundo $i$. Si no existÌa el axÛn entonces es creado, de lo contrario es destruido. Toda la sincronizaciÛn del segundo $i$ es finalizada antes del segundo $i+1$
+En las siguientes M l√≠neas, cada una contendr√° dos enteros que describen los cambios de axones. Particularmente, la $i$-√©sima l√≠nea contiene dos enteros $x_i$, $y_i$ $(x_i < y_i)$, describiendo que en el segundo $i$ hubo un cambio en la conexi√≥n entre las neuronas $x_i$ y $y_i$. Si en el segundo $i-1$ no exist√≠a el ax√≥n entonces es creado, de lo contrario es destruido. Todas las sincronizaciones del segundo $i$ son finalizadas antes del segundo $i+1$.
 
 # Salida
 
-$N$ enteros no negativos que representan la cantidad de piezas de informaciÛn distinta que tiene cada neurona en el segundo $M+1$. El $i$-Èsimo entero representa la cantidad de piezas de informaciÛn de la $i$-Èsima neurona.
+$N$ l√≠neas con un entero no negativo en cada una, representando la cantidad de piezas de informaci√≥n distinta que tiene cada neurona en el segundo $M+1$.
+
+El $i$-√©simo entero representa la cantidad de piezas de informaci√≥n de la $i$-√©sima neurona.
 
 # Ejemplo
 
 ||input
-1
+3 3
+1 2
+1 2
+2 3
+||output
 2
-||output
-Case #1: 3
+3
+3
 ||description
-ExplicaciÛn
+En el segundo 0, las tres neuronas est√°n desconectadas.  
+En el segundo 1, la neurona 1 y 2 se conectan y sincronizan. Ahora ambas tienen la informaci√≥n de la otra.  
+En el segundo 2, la neurona 1 y 2 se desconectan.  
+En el segundo 3, las neuronas 2 y 3 se conectan y sincronizan.  
+Al final, la neurona 1 tiene la informaci√≥n de las
+neuronas 1 y 2, mientras que las neuronas 2 y 3
+tienen la informaci√≥n de las neuronas 1, 2 y 3.
 ||input
-5
-10
+5 3
+1 2
+3 4
+1 4
 ||output
-Case #2: 15
+4
+4
+4
+4
+1
 ||end
 
-# LÌmites
+# L√≠mites
 
 * $2 \leq N \leq 5000$
 * $1 \leq M \leq 20000$
 * $1 \leq x_i < y_i \leq N$
 
-
 #Subproblemas
-	* AquÌ
+* Aqu√≠
 * Van
 * Los
 * suproblemas
