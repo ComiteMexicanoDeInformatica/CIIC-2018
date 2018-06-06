@@ -3,8 +3,8 @@
     "source": "CIIC 2018 (Agustín Santiago Gutiérrez)",
 
     "limits": {
-        "TimeLimit": 1000,
-        "MemoryLimit": 33554432,
+        "TimeLimit": 2000,
+        "MemoryLimit": 536870912,
         "OutputLimit": 16384,
         "ExtraWallTime": 0,
         "OverallWallTimeLimit": 60000
@@ -22,7 +22,7 @@
     },
 
     "misc": {
-        "alias": "dummy-omi",
+        "alias": "CIIC2018-Genes",
         "visibility": 0,
         "languages": "all",
         "email_clarifications": 0,

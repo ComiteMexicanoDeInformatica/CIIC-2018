@@ -33,6 +33,7 @@ bool reportabledfs(int x, bool c = false){
 	if (visited[x])
 		return color[x] != c;
 
+	color[x] = c;
 	visited[x] = true;
 
 	for (auto y: adj[x])
@@ -45,7 +46,7 @@ bool reportabledfs(int x, bool c = false){
 void paint(int x){
 	if (reportable[x]) return;
 
-	reportable[x] = true;
+	visited[x] = reportable[x] = true;
 	optK++;
 
 	for (auto y: adj[x])
@@ -84,6 +85,8 @@ void report(int K, int *kinds, long long *values)
 {
 	if (K != optK){
 		cerr << "Didn't find the correct number of genes!" << endl;
+		cerr << "Expected: " << optK << endl;
+		cerr << "Found: " << K << endl;
 		score(0);
 	}
 
@@ -107,17 +110,19 @@ void report(int K, int *kinds, long long *values)
 
 	for (int i = 1; i <= testCaseT; i++){
 		if (!visited[i] && reportable[i]){
-			cerr << "Kind missing from report: " << endl;
+			cerr << "Kind missing from report: " << i << endl;
 			score(0);
 		}
 	}
+	
+	cerr << "Expected optimal cost: " << optCost << endl;
 
 	if (testCaseTotalCost < optCost){
 		cerr << "Contestant found a better cost?!: "
 		     << testCaseTotalCost << endl;
 		exit(1);
 	} else if (testCaseTotalCost > optCost){
-		cerr << "Non-optimal query cost: " << testCaseTotalCost << endl;
+		cerr << "Contestant gave non-optimal query cost: " << testCaseTotalCost << endl;
 		score(0);
 	}
 

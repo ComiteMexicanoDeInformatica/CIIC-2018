@@ -22,9 +22,6 @@ struct NodeInformation
 
 void tryScience(int T, int C, int *cost, int *gene1, int *gene2)
 {
-    cerr << "T: " << T << endl;
-    cerr << "C: " << C << endl;
-
     forn(i,C) assert(0 <= cost[i] && cost[i] <= MAX_COST);
     forn(i,C) assert(1 <= gene1[i] && gene1[i] <= T);
     forn(i,C) assert(1 <= gene2[i] && gene2[i] <= T);
@@ -77,7 +74,7 @@ void tryScience(int T, int C, int *cost, int *gene1, int *gene2)
             swap(g1,g2);
         if (determined(g2) && !determined(g1))
         {
-            cout << g2 << endl;
+            //cout << g2 << endl;
             long long g1Value = measureBacteria(g1+1,g2+1) - value(g2);
             knownLeaders[nodes[g1].leader] = (g1Value - nodes[g1].K) / nodes[g1].leaderSign;
         }
