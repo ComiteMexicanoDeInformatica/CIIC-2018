@@ -219,7 +219,7 @@ int main()
         in << R << " " << q.size() <<"\n";
         random_shuffle(q.begin(),q.end());
         for(ll i=0; i<q.size(); i++){
-                in << q[i].fi << " " << q[i].se << " " << getProduct(q[i].fi,q[i].se) << "\n";
+                in << q[i].fi+1 << " " << q[i].se+1 << " " << getProduct(q[i].fi,q[i].se) << "\n";
                 if(q[i].se-q[i].fi+1>maxDif){
                     maxDif=q[i].se-q[i].fi+1;
                     pos__=i;
