@@ -1,94 +1,106 @@
-Anahita es una genetista muy prestigiosa. Es la directora de un grupo de cientÌficos que buscan encontrar una forma barata de producir ciertos compuestos org·nicos.
+Anahita es una genetista muy prestigiosa. Es la directora de un grupo de cient√≠ficos que buscan encontrar una forma barata de producir ciertos compuestos org√°nicos.
 
-Tienen el plan de modificar mediante ingenierÌa genÈtica ciertas bacterias muy f·ciles de cultivar, de modo que produzcan el compuesto deseado.
-La cantidad de compuesto que produce una bacteria particular est· determinada por sus genes.
+Tienen el plan de modificar mediante ingenier√≠a gen√©tica ciertas bacterias muy f√°ciles de cultivar, de modo que produzcan el compuesto deseado.
+La cantidad de compuesto que produce una bacteria particular est√° determinada por sus genes.
 
-M·s especÌficamente, cada bacteria posee exactamente dos copias de un gen productor del compuesto.
+M√°s espec√≠ficamente, cada bacteria posee exactamente dos copias de un gen productor del compuesto.
 Cada uno de estos dos genes puede ser de uno de $T$ tipos particulares de gen.
-Cada tipo tiene asociado un n˙mero entero, denominado su _Ìndice de productividad_, y decimos que el Ìndice de productividad de una copia particular del gen es igual al Ìndice correspondiente a su tipo.
-La cantidad de compuesto producida por una bacteria particular est· dada por la suma de los Ìndices de productividad de sus dos copias del gen.
+Cada tipo tiene asociado un n√∫mero entero, denominado su _√≠ndice de productividad_, y decimos que el √≠ndice de productividad de una copia particular del gen es igual al √≠ndice correspondiente a su tipo.
+La cantidad de compuesto producida por una bacteria particular est√° dada por la suma de los √≠ndices de productividad de sus dos copias del gen.
 
-AsÌ, por ejemplo, si hay $T=5$ tipos de genes, que tienen los siguientes Ìndices de productividad:
+As√≠, por ejemplo, supongamos que hay $T=5$ tipos de genes que tienen los siguientes √≠ndices de productividad:
 
-$A = 2$
- 
-$B = 5$
- 
-$C = 3$
+$$
+\begin{align*}
+A &= 2\\\\
+B &= 5\\\\
+C &= 3\\\\
+D &= 8\\\\
+E &= -1.
+\end{align*}$$ 
 
-$D = 8$
+Una bacteria que tenga una copia de un gen de tipo $B$ y una copia de un gen de tipo $C$ producir√° $5 + 3 = 8$ unidades del compuesto.
+De manera similar, bacterias que tengan genes $AD$, $DA$, $AB$ y $CC$ producir√°n $10$, $10$, $7$ y $6$ unidades del compuesto, respectivamente.
+Podemos ver que los √≠ndices de productividad pueden ser negativos. Por ejemplo, bacterias que tengan genes $EE$ _absorber√°n_ 2 unidades del compuesto provenientes del medio de cultivo,
+de forma tal que es posible medir en el laboratorio tanto √≠ndices negativos como positivos.
 
-$E = -1$ 
+El grupo de Anahita ya ha logrado determinar todos los tipos diferentes de genes productores del compuesto que existen, pero a√∫n no han podido determinar el √≠ndice de productividad asociado a cada uno de ellos.
 
-Una bacteria que tenga una copia de un gen de tipo $B$ y una copia de un gen de tipo $C$, producir· $5 + 3 = 8$ unidades del compuesto.
-De manera similar, bacterias que tengan genes $AD$, $DA$, $AB$ y $CC$ producir·n $10$, $10$, $7$ y $6$ unidades del compuesto, respectivamente.
-Los Ìndices de productividad pueden ser negativos. Bacterias que tengan genes $EE$ _absorber·n_ 2 unidades del compuesto provenientes del medio de cultivo,
-de forma tal que es posible medir en el laboratorio tanto Ìndices negativos como positivos.
+Desafortunadamente, la √∫nica forma confiable de medir el √≠ndice de productividad es creando bacterias que tengan una combinaci√≥n espec√≠fica de genes seleccionados, y luego
+realizando experimentos de laboratorio que determinen la cantidad del compuesto que producen (o absorben) dichas bacterias. Esto es bastante impr√°ctico, ya que crear bacterias que tengan
+una combinaci√≥n seleccionada de genes es un proceso muy arduo y costoso.
 
-El grupo de Anahita ya ha logrado determinar todos los tipos diferentes de genes productores del compuesto que existen, pero los cientÌficos a˙n no han podido determinar el Ìndice de productividad asociado a cada uno de ellos.
-
-Desafortunadamente, la ˙nica forma confiable de medir el Ìndice de productividad es creando bacterias que tengan una combinaciÛn especÌfica de genes seleccionados, y luego
-realizando experimentos de laboratorio que determinen la cantidad del compuesto que producen (o absorben) dichas bacterias. Esto es bastante impr·ctico, ya que crear bacterias que tengan
-una combinaciÛn seleccionada de genes es un proceso muy arduo y costoso.
-
-M·s a˙n, el costo de producir bacterias con una cierta combinaciÛn de genes no es siempre el mismo, sino que depende de la combinaciÛn particular de genes.
-PodrÌan incluso existir combinaciones de genes tales que sea imposible producir bacterias con dicha combinaciÛn particular, a˙n cuando se utilicen todas las tÈcnicas de ingenierÌa genÈtica disponibles en la actualidad.
+M√°s a√∫n, el costo de producir bacterias con una cierta combinaci√≥n de genes no es siempre el mismo, sino que depende de la combinaci√≥n particular de genes.
+Podr√≠an incluso existir combinaciones de genes tales que sea imposible producir bacterias con dicha combinaci√≥n particular, a√∫n cuando se utilicen todas las t√©cnicas de ingenier√≠a gen√©tica disponibles en la actualidad.
 
 #Problema
 
 Debes escribir un programa que, dados los costos de producir bacterias que tengan cada una de $C$ diferentes combinaciones de genes,
-ayude a Anahita a determinar tantos de los $T$ Ìndices de productividad como sea posible, y de forma tal que se minimice el costo total de la experimentaciÛn.
-Anahita pondr· su laboratorio a tu disposiciÛn, para que tu programa pueda crear bacterias genÈticamente modificadas y medir la cantidad de compuesto que producen.
+ayude a Anahita a determinar tantos de los $T$ √≠ndices de productividad como sea posible, y de forma tal que se minimice el costo total de la experimentaci√≥n.
+Anahita pondr√° su laboratorio a tu disposici√≥n, para que tu programa pueda crear bacterias gen√©ticamente modificadas y medir la cantidad de compuesto que producen.
 
-#Detalles de implementaciÛn
+#Detalles de implementaci√≥n
 
-Debes implementar una funciÛn (mÈtodo / procedimiento):
+Debes implementar una funci√≥n (m√©todo / procedimiento):
 
-__void try_science(int T, int C, int [] cost, int [] gene1, int [] gene2)__
+`void tryScience(int T, int C, int[] cost, int[] gene1, int[] gene2)`
 
-* __T__ : La cantidad de tipos diferentes de genes.
-* __C__ : La cantidad de combinaciones de genes que pueden ser producidas en forma confiable mediante bacterias genÈticamente modificadas.
-* __cost__, __gene1__, __gene2__: Cada uno de $C$ elementos, indicando que para cada entero $i$ tal que $0 \leq i < C$ (Ìndice 0),
-                          es posible crear bacterias con genes de tipo __gene1$_i$__ y __gene2__$_i$,
-                          por medio de un proceso de costo __cost__$_i$.
-* __gene1__$_i$ y __gene2__$_i$ estar·n entre $1$ y $T$, inclusive.
-                          
-__cost__$_i$ estar· entre $0$ y $1000000000$ ($10^9$), inclusive.
-                          
-No habr· ning˙n par de valores $i \neq j$ tales que \{ __gene1__$_i$, __gene2__$_i$ \} = \{ __gene1__$_j$, __gene2__$_j$ \} (la misma combinaciÛn de genes no aparecer· dos veces en la entrada).
+* `T`: La cantidad de tipos diferentes de genes.
+* `C`: La cantidad de combinaciones de genes que pueden ser producidas en forma confiable mediante bacterias gen√©ticamente modificadas.
+* `cost`, `gene1`, `gene1`: Arreglos cada uno de `C` elementos, indicando que para cada entero $i$ tal que $0 \leq \mathtt{i} < \mathtt{C}$ (√≠ndice 0),
+es posible crear bacterias con genes de tipo `gene1[i]` y `gene2[i]`,
+por medio de un proceso de costo `cost[i]`.
+* `gene1[i]` y `gene2[i]` estar√°n entre `1` y `T`, inclusive.
+* `cost[i]` estar√° entre $0$ y $1000000000$ ($10^9$), inclusive.
+* No habr√° ning√∫n par de valores $\mathtt{i} \neq \mathtt{j}$ tales que $\\{$ `gene1[i]`, `gene2[i]` $\\}$ = $\\{$ `gene1[j]`, `gene2[j]` $\\}$ (es decir, la misma combinaci√≥n de genes no aparecer√° dos veces en la entrada).
 
 #Llamada a funciones de biblioteca
 
-Para interactuar con el laboratorio, tu programa debe utilizar las siguientes dos funciones (mÈtodos / procedimientos):
+Para interactuar con el laboratorio, tu programa debe utilizar las siguientes dos funciones (m√©todos / procedimientos):
 
+* `int64 measureBacteria(int gene1, int gene2)`
 
-* __int64 measure_bacteria(int gene1, int gene2)__
+Esta funci√≥n se utiliza para crear bacterias que tengan copias de los genes `gene1` y `gene2`, que deben estar ambos entre `1` y `T`, inclusive. 
 
-Esta funciÛn se utiliza para crear bacterias que tengan copias de los genes __gene1__ y __gene2__, que deben estar ambos entre $1$ y $T$, inclusive. 
+Si el programa llama a esta funci√≥n con par√°metros ``fuera de rango'', o con una combinaci√≥n de genes que es imposible de producir, recibir√° cero puntos. Notar que las llamadas `measureBacteria(x,y)` y `measureBacteria(y,x)` siempre devolver√°n resultados id√©nticos.
 
-Si el programa llama a esta funciÛn con par·metros ``fuera de rango'', o con una combinaciÛn de genes que es imposible de producir, recibir· cero puntos. Notar que las llamadas __measure_bacteria(x,y)__ y __measure_bacteria(y,x)__ siempre devolver·n resultados idÈnticos.
-
-El valor devuelvo por esta funciÛn representa la cantidad total de compuesto producida por las bacterias seleccionadas (valores negativos indican que la bacteria absorbe el compuesto), y siempre tendr·n un valor absoluto m·ximo de $10000000000$ ($10^{10}$).
+El valor devuelvo por esta funci√≥n representa la cantidad total de compuesto producida por las bacterias seleccionadas (valores negativos indican que la bacteria absorbe el compuesto), y siempre tendr√°n un valor absoluto m√°ximo de $10000000000$ ($10^{10}$).
             
-* __void report_index(int i, int64 index)__
+* `void report(int K, int[] kind, int64[] idx)`
 
-Esta funciÛn se utiliza para informar que el gen de tipo _i_ tiene un Ìndice de productividad __index__. __i__ debe estar entre $1$ y $T$, inclusive.
+Debes llamar esta funci√≥n exactamente *una* vez antes de que `tryScience` regrese. Esta funci√≥n sirve para que tu programa informe la respuesta al evaluador.
 
-Si el programa llama a esta funciÛn con par·metros ``fuera de rango'', o con un Ìndice de productividad incorrecto, recibir· cero puntos. Llamar a esta funciÛn m·s de una vez con los mismos par·metros no es necesario, pero est· permitido.
+Para eso, debes llamar la funci√≥n con `K`, el n√∫mero de √≠ndices de productividad que lograste determinar,
+y dos arreglos de longitud `K`, representando que
+para toda $0 \leq \mathtt{i} < \mathtt{K}$, el gen
+de tipo `kind[i]` tiene √≠ndice de productividad
+`idx[i]`.
+
+Si no llamas a la funci√≥n `report`, si la llamas
+sin haber determinado la cantidad m√°xima de √≠ndices
+de productividad posible, o si mandas un valor de
+`idx[i]` que no corresponda con `kind[i]`, obtendr√°s
+cero puntos en ese caso de prueba.
 
 #Subtareas
 
-* ($gene1_i=gene2{_i}$ o $1+gene1_i= gene2_i$),  $1 \leq T \leq 1000, 0 \leq C \leq 5000$
-* ($gene1_i=gene2_i$ o $1 + gene1_i = gene2_i$),$1 \leq T \leq 500000, 0 \leq C \leq 1000000$
-* __cost__$_i = 0$, $1 \leq T \leq 500000, 0 \leq C \leq 1000000$
-* $1 \leq T \leq 1000, 0 \leq C \leq 5000$
-* $1 \leq T \leq 500000, 0 \leq C \leq 1000000$
+Cada una de las siguientes subtareas representa
+una colecci√≥n de casos de prueba disjunto de
+los dem√°s.
 
-#PuntuaciÛn
+* X puntos: (`gene1[i]` = `gene2[i]` o 1 + `gene1[i]` = `gene2[i]`),  $1 \leq T \leq 1000, 0 \leq C \leq 5000$.
+* Y puntos: (`gene1[i]` = `gene2[i]` o 1 + `gene1[i]` = `gene2[i]`), $1 \leq T \leq 50000, 0 \leq C \leq 200000$.
+* Z puntos: `cost[i]` = 0, $1 \leq T \leq 50000, 0 \leq C \leq 200000$.
+* W puntos: $1 \leq T \leq 1000, 0 \leq C \leq 5000$.
+* V puntos: $1 \leq T \leq 50000, 0 \leq C \leq 200000$.
 
-Para resolver correctamente un caso de prueba, tu programa debe reportar correctamente el Ìndice de productividad de __todos__ los genes para los cuales esto se pueda determinar con los datos disponibles,
-y adem·s debe hacerlo con el menor costo total posible.
+#Puntuaci√≥n
 
-Formalmente, si $M$ es el mÌnimo costo posible tal que, para los par·metros particulares con los cuales se llama a __try_science__ en el caso de prueba, existe una estrategia
-que garantiza determinar todos los Ìndices posibles con un costo a lo sumo $M$, entonces tu programa se considerar· correcto en ese caso de prueba ˙nicamente si determina correctamente todos los Ìndices posibles
-con un costo total $M$ o menos.
+Para resolver correctamente un caso de prueba, tu programa debe reportar correctamente el √≠ndice de productividad de __todos__ los genes para los cuales esto se pueda determinar con los datos disponibles,
+y adem√°s debe hacerlo con el menor costo total posible.
+
+Formalmente, si $M$ es el m√≠nimo costo posible tal que, para los par√°metros particulares con los cuales se llama a `tryScience` en el caso de prueba, existe una estrategia
+que garantiza determinar todos los √≠ndices posibles con un costo a lo sumo $M$, entonces tu programa se considerar√° correcto en ese caso de prueba √∫nicamente si determina correctamente todos los √≠ndices posibles
+haciendo llamadas a `measureBacteria` con un costo total $M$ o menos.
+
+{{libinteractive:download}}
