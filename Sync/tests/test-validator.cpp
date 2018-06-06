@@ -59,7 +59,7 @@ int main(int argc, char *argv[]){
 
 		assertTrue(1 <= X && X <= N);
 		assertTrue(1 <= Y && Y <= N);
-		assertTrue(X <= Y);
+		assertTrue(X < Y);
 	}
 
 	in >> ws;
