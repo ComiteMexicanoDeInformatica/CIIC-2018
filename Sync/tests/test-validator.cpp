@@ -32,7 +32,7 @@ typedef pair<int,int> pii;
 	}}
 
 int main(int argc, char *argv[]){
-	regex inRegex("\\d+ \\d+ \\d+\n(\\d+ \\d+\n)+(\\d+\n)+");
+	regex inRegex("\\d+ \\d+\n(\\d+ \\d+\n)+");
 
 	ifstream inf("data.in");
 
@@ -46,23 +46,20 @@ int main(int argc, char *argv[]){
 		return 0;
 	}
 
-	int N, M, Q;
+	int N, M;
 
-	in >> N >> M >> Q;
+	in >> N >> M;
 
-	for (int i = 0; i < N-1; i++){
+	assertTrue(1 <= N && N <= 5000);
+	assertTrue(1 <= M && M <= 20000);
+
+	for (int i = 0; i < M; i++){
 		int X, Y;
 		in >> X >> Y;
-	}
 
-	for (int j = 0; j < M; j++){
-		int D;
-		in >> D;
-	}
-
-	for (int k = 0; k < Q; k++){
-		int C;
-		in >> C;
+		assertTrue(1 <= X && X <= N);
+		assertTrue(1 <= Y && Y <= N);
+		assertTrue(X <= Y);
 	}
 
 	in >> ws;

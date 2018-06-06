@@ -11,6 +11,10 @@
 		{
 			"title": "Chemist",
 			"path": "Chemist"
+		},
+		{
+			"title": "Sync",
+			"path": "Sync"
 		}
 	]
 }
