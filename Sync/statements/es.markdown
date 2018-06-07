@@ -16,7 +16,7 @@ Tienes que encontrar la cantidad de piezas de información distintas que tiene c
 
 La primera línea contiene los enteros $N$ y $M$: la cantidad de neuronas y la cantidad de segundos de la simulación.
 
-En las siguientes M líneas, cada una contendrá dos enteros que describen los cambios de axones. Particularmente, la $i$-ésima línea contiene dos enteros $x_i$, $y_i$ $(x_i < y_i)$, describiendo que en el segundo $i$ hubo un cambio en la conexión entre las neuronas $x_i$ y $y_i$. Si en el segundo $i-1$ no existía el axón entonces es creado, de lo contrario es destruido. Todas las sincronizaciones del segundo $i$ son finalizadas antes del segundo $i+1$.
+En las siguientes M líneas, cada una contendrá dos enteros que describen los cambios de los axones. Particularmente, la $i$-ésima línea contiene dos enteros $x_i$, $y_i$ $(x_i < y_i)$, describiendo que en el segundo $i$ hubo un cambio en la conexión entre las neuronas $x_i$ y $y_i$. Si en el segundo $i-1$ no existía el axón entonces es creado, de lo contrario es destruido. Todas las sincronizaciones del segundo $i$ son finalizadas antes del segundo $i+1$.
 
 # Salida
 
@@ -37,8 +37,8 @@ El $i$-ésimo entero representa la cantidad de piezas de información de la $i$-
 3
 ||description
 En el segundo 0, las tres neuronas están desconectadas.  
-En el segundo 1, la neurona 1 y 2 se conectan y sincronizan. Ahora ambas tienen la información de la otra.  
-En el segundo 2, la neurona 1 y 2 se desconectan.  
+En el segundo 1, la neuronas 1 y 2 se conectan y sincronizan. Ahora ambas tienen la información de la otra.  
+En el segundo 2, la neuronas 1 y 2 se desconectan.  
 En el segundo 3, las neuronas 2 y 3 se conectan y sincronizan.  
 Al final, la neurona 1 tiene la información de las
 neuronas 1 y 2, mientras que las neuronas 2 y 3
@@ -62,8 +62,8 @@ tienen la información de las neuronas 1, 2 y 3.
 * $1 \leq M \leq 20000$
 * $1 \leq x_i < y_i \leq N$
 
-#Subproblemas
-* Aquí
-* Van
-* Los
-* suproblemas
+# Subtareas
+
+* En un conjunto de casos con valor de 21 puntos, se cumple que $x_i + 1 = y_i$ para toda $i$.
+* En otro conjunto separado del anterior con valor de 43 puntos, se cumple que si no desaparecieran axones, en el segundo $M+1$ habría a lo más un camino entre cualquier par de neuronas.
+* En el resto de los casos no hay restricciones adicionales.
