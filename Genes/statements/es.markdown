@@ -47,7 +47,7 @@ Debes implementar una función (método / procedimiento):
 
 * `T`: La cantidad de tipos diferentes de genes.
 * `C`: La cantidad de combinaciones de genes que pueden ser producidas en forma confiable mediante bacterias genéticamente modificadas.
-* `cost`, `gene1`, `gene1`: Arreglos cada uno de `C` elementos, indicando que para cada entero $i$ tal que $0 \leq \mathtt{i} < \mathtt{C}$ (índice 0),
+* `cost`, `gene1`, `gene1`: Arreglos cada uno de `C` elementos, indicando que para cada entero $\mathtt{i}$ tal que $0 \leq \mathtt{i} < \mathtt{C}$ (índice 0),
 es posible crear bacterias con genes de tipo `gene1[i]` y `gene2[i]`,
 por medio de un proceso de costo `cost[i]`.
 * `gene1[i]` y `gene2[i]` estarán entre `1` y `T`, inclusive.
@@ -62,9 +62,9 @@ Para interactuar con el laboratorio, tu programa debe utilizar las siguientes do
 
 Esta función se utiliza para crear bacterias que tengan copias de los genes `gene1` y `gene2`, que deben estar ambos entre `1` y `T`, inclusive. 
 
-Si el programa llama a esta función con parámetros ``fuera de rango'', o con una combinación de genes que es imposible de producir, recibirá cero puntos. Notar que las llamadas `measureBacteria(x,y)` y `measureBacteria(y,x)` siempre devolverán resultados idénticos.
+Si el programa llama a esta función con parámetros fuera de rango, o con una combinación de genes que es imposible de producir, recibirá cero puntos. Notar que las llamadas `measureBacteria(x,y)` y `measureBacteria(y,x)` siempre devolverán resultados idénticos.
 
-El valor devuelvo por esta función representa la cantidad total de compuesto producida por las bacterias seleccionadas (valores negativos indican que la bacteria absorbe el compuesto), y siempre tendrán un valor absoluto máximo de $10000000000$ ($10^{10}$).
+El valor devuelto por esta función representa la cantidad total de compuesto producida por las bacterias seleccionadas (valores negativos indican que la bacteria absorbe el compuesto), y siempre tendrá un valor absoluto máximo de $10000000000$ ($10^{10}$).
             
 * `void report(int K, int[] kind, int64[] idx)`
 
