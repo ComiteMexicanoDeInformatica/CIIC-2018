@@ -3,7 +3,7 @@
     "source": "CIIC 2018 (Freddy Román)",
 
     "limits": {
-        "TimeLimit": 1000,
+        "TimeLimit": 2000,
         "MemoryLimit": 33554432,
         "OutputLimit": 16384,
         "ExtraWallTime": 0,
