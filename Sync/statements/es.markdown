@@ -58,7 +58,7 @@ tienen la información de las neuronas 1, 2 y 3.
 
 # Límites
 
-* $2 \leq N \leq 5000$
+* $2 \leq N \leq 1000$
 * $1 \leq M \leq 20000$
 * $1 \leq x_i < y_i \leq N$
 
