@@ -65,5 +65,5 @@ tienen la información de las neuronas 1, 2 y 3.
 # Subtareas
 
 * En un conjunto de casos con valor de 21 puntos, se cumple que $x_i + 1 = y_i$ para toda $i$.
-* En otro conjunto separado del anterior con valor de 43 puntos, se cumple que si no desaparecieran axones, en el segundo $M+1$ habría a lo más un camino entre cualquier par de neuronas.
+* En otro conjunto separado del anterior con valor de 33 puntos, se cumple que si no desaparecieran axones, en el segundo $M+1$ habría a lo más un camino entre cualquier par de neuronas.
 * En el resto de los casos no hay restricciones adicionales.
