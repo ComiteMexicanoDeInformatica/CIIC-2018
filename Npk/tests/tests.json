@@ -1,5 +1,11 @@
 {
   "solutions": [
+    {
+      "filename": "solutions/100A.cpp",
+      "verdict": "AC",
+      "score": 100,
+      "language": "cpp11"
+    }
   ],
   "inputs": {
     "filename": "test-validator.cpp"
