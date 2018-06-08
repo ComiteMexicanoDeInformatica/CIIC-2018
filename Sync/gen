@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+i=1
+
+while read case;
+do
+	echo generating large.$i.in
+	echo $case | ./case-generator > cases/large.$i.in
+	(( i++ ))
+done < caseplan
