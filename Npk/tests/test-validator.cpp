@@ -68,6 +68,8 @@ vector<pii> edges;
 bool isTree(){
 	UnionFind uf(N+1);
 
+	assertEqual(edges.size(), N-1);
+
 	for (pii e: edges){
 		if (uf.id(e.fst) == uf.id(e.snd))
 			return false;
@@ -75,6 +77,19 @@ bool isTree(){
 	}
 
 	return true;
+}
+
+bool isLine(){
+	vector<int> adj(N+1);
+
+	for (pii e: edges){
+		adj[e.fst]++;
+		adj[e.snd]++;
+	}
+
+	return all_of(e.begin(), e.end(),
+		[](int x){ return x <= 2; }
+	);
 }
 
 int main(int argc, char *argv[]){
@@ -124,9 +139,25 @@ int main(int argc, char *argv[]){
 
 	string caseName(argv[1]);
 
-	if (caseName.find("line") != string::npos){
-	} else if (caseName.find("tree") != string::npos){
+	if (caseName.find("quadraticline") != string::npos){
+		assertTrue(isLine());
+		assertTrue(N <= 1000);
+	} else if (caseName.find("quadratic") != string::npos){
+		assertTrue(N <= 1000);
+	} else if (caseName.find("pathdp") != string::npos){
+		assertTrue(K <= 10);
+		for (int i = 1; i <= N; i++)
+			assertTrue(e[i] < P);
+	} else if (caseName.find("slow") != string::npos){
+		assertTrue(K <= 10);
+	} else if (caseName.find("line") != string::npos){
+		assertTrue(isLine());
+		assertTrue(N <= 1000);
+	} else if (caseName.find("hard") != string::npos){
+		assertTrue(N >= 20000);
 	} else {
+		cerr << "Invalid case name: " << caseName << endl;
+		assertTrue(false);
 	}
 
 	cout << 1 << endl;
