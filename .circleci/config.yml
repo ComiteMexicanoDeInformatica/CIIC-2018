@@ -19,7 +19,7 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               pipenv run python3 utils/upload.py || exit 1
-              chmod +x utils/publish && ./utils/publish || exit 1
+              #chmod +x utils/publish && ./utils/publish || exit 1
             fi
 workflows:
   version: 2

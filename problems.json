@@ -11,6 +11,14 @@
 		{
 			"title": "Chemist",
 			"path": "Chemist"
+		},
+		{
+			"title": "Sync",
+			"path": "Sync"
+		},
+		{
+			"title": "Árbol NP-K",
+			"path": "Npk"
 		}
 	]
 }
