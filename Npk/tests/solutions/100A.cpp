@@ -77,14 +77,17 @@ struct Arbol{
 		}
 
 		muerto[u] = false;		
-		int primero = valor[u] < P ? 1 : 0;
-		cubeta[primero]++;
+		int primero = valor[u] < P ? 1 : 0;		
 		for(int i = 0; i < aris[u].size(); i++){
 			v = aris[u][i];
 			if(muerto[v]) continue;
 			Camino(aris[u][i],u,0,0);
 			Camino(aris[u][i],u,primero,1);
 		}			
+		cubeta[primero]++;
+
+		res += Long(cubeta[K-1]);
+
 		Camino(u,u,0,2);
 	}	
 
