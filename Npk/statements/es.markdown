@@ -42,3 +42,4 @@ Los pares de nodos que cumplen con lo que pide el problema son:
 * $1 \leq N \leq 500,000$
 * $1 \leq K \leq N+1$
 * $1 \leq P, e_i \leq 10^9$
+* $P \neq e_i$ para toda $i$.
