@@ -25,9 +25,11 @@ vector<edge> adj[maxn];
 map<pii, int> last;
 
 int ans[maxn], t[maxn];
+bool v[maxn];
 
 int dijkstra(int s){
 	fill(t, t+N, M);
+	fill(v, v+N, false);
 
 	t[s] = 0;
 
@@ -38,8 +40,11 @@ int dijkstra(int s){
 	while (!q.empty()){
 		auto curr = q.top(); q.pop();
 
-		if (t[curr.snd] > curr.fst)
+		if (v[curr.snd])
 			continue;
+
+		v[curr.snd] = true;
+		ans[curr.snd]++;
 
 		for (auto e: adj[curr.snd]){
 			if (e.e < curr.fst)
@@ -55,10 +60,6 @@ int dijkstra(int s){
 			q.push(pii(tt, e.node));
 		}
 	}
-
-	for (int i = 0; i < N; i++)
-		if (t[i] < M)
-			ans[i]++;
 }
 
 int main(){

@@ -31,6 +31,18 @@ typedef pair<int,int> pii;
 		cout << 0 << endl; exit(0);\
 	}}
 
+struct lit {
+	char c;
+	lit(char c) : c(c) {}
+};
+
+istream& operator >> (istream &in, lit target){
+	char c;
+	in >> c;
+	assertEqual(c, target.c);
+	return in;
+}
+
 class UnionFind {
 	vector<int> _id;
 
@@ -64,32 +76,26 @@ bool isForest(int N, const vector<pii> &eList){
 }
 
 int main(int argc, char *argv[]){
-	regex inRegex("\\d+ \\d+\n(\\d+ \\d+\n)+");
-
 	ifstream inf("data.in");
 
 	stringstream in;
 	in << inf.rdbuf();
 	inf.close();
 
-	if (!regex_match(in.str(), inRegex)){
-		cerr << "Input didn't match regex!" << endl;
-		cout << 0 << endl;
-		return 0;
-	}
-
 	int N, M;
 
-	in >> N >> M;
+	in >> noskipws;
 
-	assertTrue(1 <= N && N <= 5000);
+	in >> N >> lit(' ') >> M >> lit('\n');
+
+	assertTrue(1 <= N && N <= 1000);
 	assertTrue(1 <= M && M <= 20000);
 
 	vector<pii> e(M);
 
 	for (int i = 0; i < M; i++){
 		int X, Y;
-		in >> X >> Y;
+		in >> X >> lit(' ') >> Y >> lit('\n');
 
 		assertTrue(1 <= X && X <= N);
 		assertTrue(1 <= Y && Y <= N);
@@ -97,6 +103,9 @@ int main(int argc, char *argv[]){
 
 		e[i] = pii(X, Y);
 	}
+
+	in.get();
+	assertTrue(in.eof());
 
 	string caseName(argv[1]);
 
@@ -110,8 +119,6 @@ int main(int argc, char *argv[]){
 		assertTrue(!isForest(N, e));
 	}
 
-	in >> ws;
-	assertTrue(in.eof());
 
 	cout << 1 << endl;
 }
