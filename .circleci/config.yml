@@ -11,7 +11,7 @@ jobs:
           command: |
             sudo pip install pipenv
             pipenv install
-      - run: pipenv run python3 utils/generateouts.py
+      - run: ulimit -s unlimited && pipenv run python3 utils/generateouts.py
       - run: pipenv run python3 utils/runtests.py
       - add_ssh_keys
       - deploy:
