@@ -6,7 +6,7 @@
         "TimeLimit": 2000,
         "MemoryLimit": 536870912,
         "OutputLimit": 16384,
-        "ExtraWallTime": 0,
+        "ExtraWallTime": 500,
         "OverallWallTimeLimit": 60000
     },
 
