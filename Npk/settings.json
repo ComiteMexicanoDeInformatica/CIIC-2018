@@ -3,7 +3,7 @@
     "source": "CIIC 2018 (Ángel David Ortega Ramírez)",
 
     "limits": {
-        "TimeLimit": 1000,
+        "TimeLimit": 2500,
         "MemoryLimit": 268435456,
         "OutputLimit": 16384,
         "ExtraWallTime": 0,
