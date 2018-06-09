@@ -43,3 +43,14 @@ Los pares de nodos que cumplen con lo que pide el problema son:
 * $1 \leq K \leq N+1$
 * $1 \leq P, e_i \leq 10^9$
 * $P \neq e_i$ para toda $i$.
+
+
+# Subproblemas
+
+* 10 puntos: cada nodo estará conectado con a lo más 2 nodos y $1 \leq N \leq 1000$ .
+* 14 puntos: $1 \leq N \leq 1000$ .
+* 15 puntos: $1 \leq K \leq min(10, N+1)$ y para todo $i$, $e_i < P$ .
+* 15 puntos: $1 \leq K \leq min(10, N+1)$ .
+* 20 puntos: cada nodo estará conectado con a lo más 2 nodos.
+
+
