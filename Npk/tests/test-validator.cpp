@@ -18,6 +18,7 @@ typedef pair<int,int> pii;
 	{ const bool pv = p;\
 	if (!pv) {\
 		cerr << "Assertion failure! Expected true." << endl;\
+		cerr << "Line: " << __LINE__ << endl;\
 		cerr << "Expression: " << #p << endl;\
 		cout << 0 << endl; exit(0);\
 	}}
@@ -26,6 +27,7 @@ typedef pair<int,int> pii;
 	{ const auto &pv = p; const auto &qv = q;\
 	if (pv != qv) {\
 		cerr << "Assertion failure!" << endl;\
+		cerr << "Line: " << __LINE__ << endl;\
 		cerr << #p << " != " << #q << endl;\
 		cerr << pv << " != " << qv << endl;\
 		cout << 0 << endl; exit(0);\
@@ -152,9 +154,8 @@ int main(int argc, char *argv[]){
 		assertTrue(K <= 10);
 	} else if (caseName.find("line") != string::npos){
 		assertTrue(isLine());
-		assertTrue(N <= 1000);
 	} else if (caseName.find("hard") != string::npos){
-		assertTrue(N >= 20000);
+		// pass
 	} else {
 		cerr << "Invalid case name: " << caseName << endl;
 		assertTrue(false);
