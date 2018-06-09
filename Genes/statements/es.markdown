@@ -47,7 +47,7 @@ Debes implementar una función (método / procedimiento):
 
 * `T`: La cantidad de tipos diferentes de genes.
 * `C`: La cantidad de combinaciones de genes que pueden ser producidas en forma confiable mediante bacterias genéticamente modificadas.
-* `cost`, `gene1`, `gene1`: Arreglos cada uno de `C` elementos, indicando que para cada entero $\mathtt{i}$ tal que $0 \leq \mathtt{i} < \mathtt{C}$ (índice 0),
+* `cost`, `gene1`, `gene2`: Arreglos cada uno de `C` elementos, indicando que para cada entero $\mathtt{i}$ tal que $0 \leq \mathtt{i} < \mathtt{C}$ (índice 0),
 es posible crear bacterias con genes de tipo `gene1[i]` y `gene2[i]`,
 por medio de un proceso de costo `cost[i]`.
 * `gene1[i]` y `gene2[i]` estarán entre `1` y `T`, inclusive.

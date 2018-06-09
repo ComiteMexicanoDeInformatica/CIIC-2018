@@ -1,4 +1,4 @@
-Tienes un árbol con $N$ nodos numerados de $1$ a $N$ y dos enteros positivos $P$ y $K$. Los nodos están indexados de $1$ a $N$ y cada nodo $i$ tiene un valor $e_i$ asignado. Se cumple que ningún $e_i$ es igual a $P$.
+Tienes un árbol con $N$ nodos y dos enteros positivos $P$ y $K$. Los nodos están indexados de $1$ a $N$ y cada nodo $i$ tiene un valor $e_i$ asignado. Se cumple que ningún $e_i$ es igual a $P$.
 
 Para cada par de nodos con índice $u$ e índice $v$,  ($u \leq v$), existe un único camino de nodos ($u,a_1, a_2, ...,v$) tal que conectan $u$ y $v$. Si tomamos los valores $e_i$ del camino, es decir el arreglo ($e_u, e_{a_1}, e_{a_2}, ..., e_v$), le insertamos el valor $P$ y lo ordenamos, ¿Queda el valor $P$ en la posición $K$ del arreglo ordenado?
 
