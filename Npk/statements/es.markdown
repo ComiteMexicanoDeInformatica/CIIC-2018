@@ -8,7 +8,7 @@ Tienes que encontrar la cantidad de pares de nodos $u$ y $v$ tal que al aplicar 
 
 # Entrada
 
-En la primera línea los valores $N$, $K$ y $P$.
+En la primera línea los valores $N$, $P$ y $K$.
 
 En la segunda línea, los $N$ valores $e_i$.
 

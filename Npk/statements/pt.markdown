@@ -8,7 +8,7 @@ Tens que encontrar a quantidade de pares de nós $u$ e $v$ tal que ao aplicar as
 
 # Input
 
-Na primeira linha os valores $N$, $K$ e $P$.
+Na primeira linha os valores $N$, $P$ e $K$.
 
 Na segunda linha os $N$ valores de $e_i$.
 
