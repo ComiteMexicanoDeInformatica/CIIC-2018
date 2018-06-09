@@ -29,4 +29,4 @@ A primeira operação aplica-se nos dois primeiros elementos, convertendo `[-1, 
 # Subtarefas
 
 * Para um subconjunto de casos valendo 7 pontos, cumpre-se que todos os valores do array têm o mesmo sinal.
-* Para un subconjunto de casos valendo 43 puntos, cumpre-se que $1 \leq n \leq 20$.
+* Para um subconjunto de casos valendo 43 puntos, cumpre-se que $1 \leq n \leq 20$.

@@ -32,7 +32,7 @@ Podem inclusive existir combinações de genes tais que é impossível produzir 
 
 #Problema
 
-Deves escrever um programa que, dados os custos de produzir bactérias que tenham cada ma das $C$ diferentes combinações de genes, ajude a Anahita a determinar o maior número de $T$ índices de produtividade possível, e de forma que minimize o custo total das experiências.
+Deves escrever um programa que, dados os custos de produzir bactérias que tenham cada uma das $C$ diferentes combinações de genes, ajude a Anahita a determinar o maior número de $T$ índices de produtividade possível, e de forma que minimize o custo total das experiências.
 Anahita colocará o seu laboratório à tua disposição, para que o teu programa possa criar bactérias geneticamente modificadas e medir a quantidade de composto que produzem.
 
 #Detalhes da implementação
@@ -82,7 +82,7 @@ Cada uma das seguintes subtarefas representa uma coleção de casos de teste dis
 
 #Pontuação
 
-Para resolver corretamente um caso de teste, o teu programa deve reportar corretamente o índice de produtividade de __todos__ os genes para os quais é possível determinar com os dados disponíveis, e além disse deve fazê-lo com o menor custo possível.
+Para resolver corretamente um caso de teste, o teu programa deve reportar corretamente o índice de produtividade de __todos__ os genes para os quais é possível determinar com os dados disponíveis, e além disso deve fazê-lo com o menor custo possível.
 
 Formalmente, se $M$ é o mínimo custo possível tal que, para todos os parâmetros particulares com os quais se chama `tryScience` no caso de teste, exista uma estratégia pela qual é garantido determinar todos os índices possíveis com um custo de no máximo $M$, então o teu programa será considerado correcto nesse caso de prova unicamente se determina corretamente todos os índices possíveis fazendo chamadas a  `measureBacteria` com um custo total de $M$ ou menos.
 

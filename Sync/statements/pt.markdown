@@ -10,7 +10,7 @@ A simulação dura $M$ segundos, e em cada segundo $j$, $1 \leq j \leq M$, o est
 
 #Problema 
 
-Tens que encontrar a quantidade de pedações de informação distintos que tem cada neurónio no segundo $M+1$.
+Tens que encontrar a quantidade de pedaços de informação distintos que tem cada neurónio no segundo $M+1$.
 
 # Input
 
@@ -64,5 +64,5 @@ No final, o neurónio 1 tem a informação dos neurónios 1 e 2, ao passo que os
 # Subtarefas
 
 * Para um conjunto de casos de teste valendo 21 pontos, cumpre-se que $x_i + 1 = y_i$ para todo o $i$.
-* Para um outro conjunto separado do anterior com um valor de 43 pontos, cumpre-se que se não desaparecerem axónios, no segundo $M+1$ haveria no máximo ou caminho entre um qualquer par de neurónios.
+* Para um outro conjunto separado do anterior com um valor de 43 pontos, cumpre-se que se não desaparecerem axónios, no segundo $M+1$ haveria no máximo um caminho entre um qualquer par de neurónios.
 * No resto dos casos não há restrições adicionais.
