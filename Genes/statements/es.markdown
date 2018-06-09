@@ -88,11 +88,11 @@ Cada una de las siguientes subtareas representa
 una colección de casos de prueba disjunto de
 los demás.
 
-* X puntos: (`gene1[i]` = `gene2[i]` o 1 + `gene1[i]` = `gene2[i]`),  $1 \leq T \leq 1000, 0 \leq C \leq 5000$.
-* Y puntos: (`gene1[i]` = `gene2[i]` o 1 + `gene1[i]` = `gene2[i]`), $1 \leq T \leq 50000, 0 \leq C \leq 200000$.
-* Z puntos: `cost[i]` = 0, $1 \leq T \leq 50000, 0 \leq C \leq 200000$.
-* W puntos: $1 \leq T \leq 1000, 0 \leq C \leq 5000$.
-* V puntos: $1 \leq T \leq 50000, 0 \leq C \leq 200000$.
+* 10 puntos: (`gene1[i]` = `gene2[i]` o 1 + `gene1[i]` = `gene2[i]`),  $1 \leq T \leq 1000, 0 \leq C \leq 5000$.
+* 20 puntos: (`gene1[i]` = `gene2[i]` o 1 + `gene1[i]` = `gene2[i]`), $1 \leq T \leq 50000, 0 \leq C \leq 200000$.
+* 25 puntos: `cost[i]` = 0, $1 \leq T \leq 50000, 0 \leq C \leq 200000$.
+* 20 puntos: $1 \leq T \leq 1000, 0 \leq C \leq 5000$.
+* 25 puntos: $1 \leq T \leq 50000, 0 \leq C \leq 200000$.
 
 #Puntuación
 
