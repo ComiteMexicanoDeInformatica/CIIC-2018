@@ -27,7 +27,7 @@ class EphemeralGrader:
         r = requests.post(
                 self.endpoint,
                 json=payload,
-                timeout=65)
+                timeout=100)
 
         if 'multipart/form-data' not in r.headers.get('content-type', ''):
             logger.error('Unexpected response!')
