@@ -20,6 +20,8 @@ int main(){
 	vector<int> nodes, e(N+1);
 	nodes.reserve(N-1);
 
+	e[S] = 2;
+
 	vector<pii> edges;
 	edges.reserve(N-1);
 
