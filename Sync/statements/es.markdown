@@ -1,12 +1,12 @@
-Estás experimentando con una simulación de un nuevo tipo de red neuronal artificial. La red neuronal está formada por neuronas conectadas entre ellas por medio de axones. Inicialmente cada red neuronal tiene una importante pieza de información distinta.
+Estás experimentando con una simulación de un nuevo tipo de red neuronal artificial. La red neuronal está formada por neuronas conectadas entre ellas por medio de axones. Inicialmente cada neurona tiene una importante pieza de información distinta.
 
 Al formarse una red neuronal, las piezas de información de las neuronas se empiezan a compartir entre ellas. Cuando se crea un nuevo axón que conecta dos neuronas, sus piezas de información son automáticamente compartidas. Es posible compartir piezas de información de una neurona a otra siempre y cuando estén conectadas por medio de una secuencia de axones.
 
 El sistema para compartir información es muy eficiente: si dos neuronas pueden compartir sus piezas de información entre ellas, entonces automáticamente sincronizan todas las piezas de información. Después de una sincronización entre una neurona A y una neurona B, ambas contendrán todas las piezas de información que contenían las neuronas A y B antes de la sincronización.
 
-Por detalles de desempeño, a lo más $M$ axones pueden ser creados. Al inicio, ningún axón existe. Algunos axones pueden llegar a desaparecer después de un tiempo. Si un axón desaparece, no puede ser usado hasta que vuelva a ser creado.
+Por detalles de desempeño, a lo más $M$ axones pueden ser creados. Algunos axones pueden llegar a desaparecer después de un tiempo. Si un axón desaparece, no puede ser usado hasta que vuelva a ser creado.
 
-La simulación dura $M$ segundos y cada segundo $j$, $1 \leq j \leq M$, el estado de un axón cambia (aparece o desaparece).
+La simulación dura $M$ segundos y cada segundo $j$, $1 \leq j \leq M$, el estado de un axón cambia (aparece o desaparece). Al inicio, no hay ningún axón entre las neuronas. Es decir, todas las neuronas están desconectadas.
 
 #Problema 
 
