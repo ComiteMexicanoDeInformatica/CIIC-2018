@@ -154,9 +154,8 @@ int main(int argc, char *argv[]){
 		assertTrue(K <= 10);
 	} else if (caseName.find("line") != string::npos){
 		assertTrue(isLine());
-		assertTrue(N <= 1000);
 	} else if (caseName.find("hard") != string::npos){
-		assertTrue(N >= 20000);
+		// pass
 	} else {
 		cerr << "Invalid case name: " << caseName << endl;
 		assertTrue(false);
