@@ -18,6 +18,7 @@ typedef pair<int,int> pii;
 	{ const bool pv = p;\
 	if (!pv) {\
 		cerr << "Assertion failure! Expected true." << endl;\
+		cerr << "Line: " << __LINE__ << endl;\
 		cerr << "Expression: " << #p << endl;\
 		cout << 0 << endl; exit(0);\
 	}}
@@ -26,6 +27,7 @@ typedef pair<int,int> pii;
 	{ const auto &pv = p; const auto &qv = q;\
 	if (pv != qv) {\
 		cerr << "Assertion failure!" << endl;\
+		cerr << "Line: " << __LINE__ << endl;\
 		cerr << #p << " != " << #q << endl;\
 		cerr << pv << " != " << qv << endl;\
 		cout << 0 << endl; exit(0);\
