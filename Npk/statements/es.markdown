@@ -47,10 +47,10 @@ Los pares de nodos que cumplen con lo que pide el problema son:
 
 # Subproblemas
 
-* 10 puntos: cada nodo estará conectado con a lo más 2 nodos y $1 \leq N \leq 1000$ .
-* 14 puntos: $1 \leq N \leq 1000$ .
-* 15 puntos: $1 \leq K \leq min(10, N+1)$ y para todo $i$, $e_i < P$ .
-* 15 puntos: $1 \leq K \leq min(10, N+1)$ .
-* 20 puntos: cada nodo estará conectado con a lo más 2 nodos.
-
+* 10 puntos: Cada nodo estará conectado con a lo más 2 nodos y $1 \leq N \leq 1000$.
+* 14 puntos: $1 \leq N \leq 1000$.
+* 15 puntos: $1 \leq K \leq \min(10, N+1)$ y para todo $i$, $e_i < P$.
+* 15 puntos: $1 \leq K \leq \min(10, N+1)$.
+* 20 puntos: Cada nodo estará conectado con a lo más 2 nodos.
+* 26 puntos: Sin restricciones adicionales.
 

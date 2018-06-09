@@ -45,8 +45,9 @@ Os pares de nós que cumprem com o que o problema pede são:
 
 # Subtarefas
 
-* 10 pontos: cada nó será conectado a no máximo 2 nós e $1 \leq N \leq 1000$ .
-* 14 pontos: $1 \leq N \leq 1000$ .
-* 15 pontos: $1 \leq K \leq min(10, N+1)$ e para tudo $i$, $e_i < P$ .
-* 15 pontos: $1 \leq K \leq min(10, N+1)$ .
-* 20 pontos: cada nó será conectado a no máximo 2 nós.
+* 10 pontos: Cada nó será conectado a no máximo 2 nós e $1 \leq N \leq 1000$.
+* 14 pontos: $1 \leq N \leq 1000$.
+* 15 pontos: $1 \leq K \leq \min(10, N+1)$ e para tudo $i$, $e_i < P$.
+* 15 pontos: $1 \leq K \leq \min(10, N+1)$.
+* 20 pontos: Cada nó será conectado a no máximo 2 nós.
+* 26 pontos: Sem restrições adicionais.
