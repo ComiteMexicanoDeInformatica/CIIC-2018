@@ -5,6 +5,11 @@
       "verdict": "AC",
       "score": 100,
       "language": "cpp11"
+    },
+    {
+      "filename": "solutions/ParcialA.cpp",
+      "verdict": "TLE",      
+      "language": "cpp11"
     }
   ],
   "inputs": {
