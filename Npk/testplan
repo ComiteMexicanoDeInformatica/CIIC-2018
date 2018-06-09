@@ -8,7 +8,8 @@ quadratic.0 0
 quadratic.1 0
 quadratic.2 0
 quadratic.3 0
-quadratic.4 14
+quadratic.4 0
+quadratic.evil 14
 pathdp.0 0
 pathdp.1 0
 pathdp.2 0
@@ -18,8 +19,7 @@ slow.0 0
 slow.1 0
 slow.2 0
 slow.3 0
-slow.4 0
-slow.evil 15
+slow.4 15
 line.0 0
 line.1 0
 line.2 0
